@@ -21,7 +21,7 @@ exports.newsletter = function(req, res){
 	}
 };
 
-exports.list = function (req, res) {
+exports.current = function (req, res) {
 	res.render('newsletter', {
 		title: 'All Newsletter Content', 
 		newletterContent: newletterContent});
