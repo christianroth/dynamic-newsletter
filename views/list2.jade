@@ -1,0 +1,8 @@
+extends layout
+
+block news
+	h1= title
+	ul
+		each flight, index in flights
+			- flight = flight.getInformation()
+			li= flight.news_snapshot_title2 + ':' + flight.news_snapshot_summary2

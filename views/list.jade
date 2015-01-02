@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+	p here is a list of stories that we like:
+	ul
+		each flight, index in flights
+			- flight = flight.getInformation()
+			li= flight.news_snapshot_title1 + ':' + flight.news_snapshot_summary1
+
+block news
+	h1 News stories
+	ul
+		each flight, index in flights
+			- flight = flight.getInformation()
+			li= flight.news_snapshot_title2 + ':' + flight.news_snapshot_summary2
