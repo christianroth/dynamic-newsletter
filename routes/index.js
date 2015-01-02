@@ -3,37 +3,26 @@
  * GET home page.
  */
 
-var flights = require('../data');
+var newletterContent = require('../data');
 
-var flight = require('../flight');
+var newsletter = require('../newsletter');
 
-for(var number in flights) {
-	flights[number] = flight(flights[number]);
+for(var number in newletterContent) {
+	newletterContent[number] = newsletter(newletterContent[number]);
 }
 
-exports.flight = function(req, res){
+exports.newsletter = function(req, res){
 	var number = req.param('number');
 
-	if (typeof flights[number] === 'undefined') {
+	if (typeof newletterContent[number] === 'undefined') {
 		res.status(404).json({status: 'error'});
 	} else {
-		res.json(flights[number].getInformation());
-	}
-};
-
-exports.arrived = function (req, res) {
-	var number = req.param('number');
-
-	if (typeof flights[number] === 'undefined') {
-		res.status(404).json({status: 'error'});
-	} else {
-		flights[number].triggerArrive();
-		res.json({status: 'done'});
+		res.json(newletterContent[number].getInformation());
 	}
 };
 
 exports.list = function (req, res) {
 	res.render('newsletter', {
-		title: 'All Flights', 
-		flights: flights});
+		title: 'All Newsletter Content', 
+		newletterContent: newletterContent});
 };
