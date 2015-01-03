@@ -15,8 +15,8 @@ var Newsletter = function () {
 			}
 		}
 	};
-	
-	this.getInformation = function () {
+
+	this.getStoryHighlights = function () {
 		return this.data;
 	};
 };
