@@ -1,0 +1,178 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    meta(name='description', content='')
+    |     
+    meta(name='author', content='')
+    |     
+    link(rel='icon', href='../../favicon.ico')
+    |     
+    title= title
+    // Bootstrap core CSS
+    link(href='bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='newsletter.css', rel='stylesheet')
+  body
+    .newsletter-masthead
+      .container
+        nav.newsletter-nav
+          a.newsletter-nav-item.active(href='#') Current Issue
+          |           
+          a.newsletter-nav-item(href='#') Archive
+          |           
+          a.newsletter-nav-item(href='#') CS Jive Site
+          |                    
+    |     
+    .container
+      .newsletter-header
+        h1.newsletter-title The Cloud Services newsletter
+        |         
+        p.lead.newsletter-description What we do--  We enable Yahoos to commit to production in less than 5 minutes. 
+      |       
+      .row
+        .col-sm-8.newsletter-main
+          .newsletter-post
+            h2.newsletter-post-title Screwdriver (Hosted CI)
+            |             
+            p.newsletter-post-meta
+              | Screwdriver enables CI/CD as a central hosted solution 
+              a(href='#') Jive site
+            |             
+            p
+              | We are analyzing opted-in builds for failure reasons using Cinch and forwarding this data into Splunk for a broader analysis of the health of the company&rsquo;s builds. This data and analysis are critical to our ability to identify areas to address in order to provide a performant and reliable CD service for Yahoo.
+            |             
+            hr
+            |             
+            p
+              | Screwdriver is Yahoo&rsquo;s centralized Continuous Delivery service, enabling developers to deliver their software in a fast and automated way.
+            |             
+            blockquote
+              p
+                | &quot;We were stuck in no man&apos;s land until we offloaded support to the 
+                strong Screwdriver service
+                | . Thank you DPS team&quot; -- Joe Somebody, Media Dev
+            |             
+            h4
+              | More about 
+              a(href='#') Screwdriver news
+          // /.newsletter-post
+          .newsletter-post
+            h2.newsletter-post-title Another newsletter post
+            |             
+            p.newsletter-post-meta
+              | December 23, 2013 by 
+              a(href='#') Jacob
+            |             
+            p
+              | Cum sociis natoque penatibus et magnis 
+              a(href='#') dis parturient montes
+              | , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+            |             
+            blockquote
+              p
+                | Curabitur blandit tempus porttitor. 
+                strong Nullam quis risus eget urna mollis
+                |  ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+            |             
+            p
+              | Etiam porta 
+              em sem malesuada magna
+              |  mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+            |             
+            p
+              | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          // /.newsletter-post
+          .newsletter-post
+            h2.newsletter-post-title Posting #3
+            |             
+            p.newsletter-post-meta
+              | December 14, 2013 by 
+              a(href='#') Chris
+            |             
+            p
+              | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            |             
+            ul
+              li Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+              |               
+              li Donec id elit non mi porta gravida at eget metus.
+              |               
+              li Nulla vitae elit libero, a pharetra augue.
+            |             
+            p
+              | Etiam porta 
+              em sem malesuada magna
+              |  mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+            |             
+            p
+              | Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+          // /.newsletter-post
+          nav
+            ul.pager
+              li
+                a(href='#') Previous
+              |               
+              li
+                a(href='#') Next
+        // /.newsletter-main
+        .col-sm-3.col-sm-offset-1.newsletter-sidebar
+          .sidebar-module.sidebar-module-inset
+            h4 About
+            |             
+            p
+              | The Cloud Services organization provides cutting edge self-serve, dynamic and elastic services enabling Yahoo developers to write, commit, and deploy code 
+              em quickly and efficiently.
+            |             
+            p
+              | As part of the Yahoo Platforms &amp; Personalization Products organization, we provide Platform as a Service (PaaS), Infrastructure as a Service (IaaS), Monitoring as a Service (MaaS), and Continuous Delivery (CD) solutions that enable and accelerate Yahoo strategic initiatives.
+            |             
+            p
+              | More info on 
+              a(href='yo/cs') Cloud Services
+          |           
+          .sidebar-module
+            h4 Milestones
+            |             
+            ol.list-unstyled
+              li
+                a(href='http://yo/cs/YAMAS') Monitoring Meetup: January 31
+              |               
+              li
+                a(href='http://yo/cs/vipng') Vip NG Launch: January 15
+              |               
+              li
+                a(href='http://yo/cs/MH2') Manhattan Docker Prod GA: Q1
+              |               
+              li
+                a(href='http://yo/cs/Screwdriver') Screwdriver v3 Pilot: Q2
+              |               
+              li
+                a(href='http://yo/cs/Athens') Athens Data Plane Pilot: Q2
+          |           
+          .sidebar-module.sidebar-module-inset
+            h4 Adoption metrics
+            |             
+            ol.list-unstyled
+              li
+                | Q4 increase in YAMAS 2 metrics: 156%
+                a(href='#')  (more info)
+              |               
+              li
+                | Vip provisioning time in Q4: 5 secs
+                a(href='#')  (more info)
+        // /.newsletter-sidebar
+      // /.row
+    // /.container
+    footer.newsletter-footer
+      p
+        | The Cloud Services newsletter is published monthly. See archive for older editions of the 
+        a(href='http://yo/cs-newsletter-archive') newsletter
+        | .
+      |       
+      p
+        a(href='#') Back to top

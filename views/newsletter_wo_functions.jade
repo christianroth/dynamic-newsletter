@@ -42,9 +42,18 @@ head
             p.newsletter-post-meta Features from this quarter&apos;s issue of the Cloud Services newsletter
             |               
             ul
-              each newsletter, index in newsletterContent
-                - newsletter = newsletter.getStoryHighlights()
-                li= newsletter.title + ': ' + newsletter.description               
+              li
+                | YAMAS delivered in 19 hours thanks to OpenStack Bare Metal: 
+                a(href='#') story
+              |                 
+              li
+                | Screwdriver v3 coming to theaters soon: 
+                a(href='#') story
+              |                 
+              li
+                | Athens getting ready for primetime: 
+                a(href='#') story
+            |               
             p.newsletter-post-meta At a glance, how are products delivered by Cloud Services being utilized:
             |               
             ol

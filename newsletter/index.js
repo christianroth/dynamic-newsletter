@@ -1,11 +1,9 @@
 var Newsletter = function () {
 	this.data = {
-		news_snapshot_title1: null,
-		news_snapshot_summary1: null,
-		news_snapshot_title2: null,
-		news_snapshot_summary2: null,
-		news_snapshot_title3: null,
-		news_snapshot_summary3: null
+		title: null,
+		description: null,
+		link: null,
+		sidebar: null
 	};
 
 	this.fill = function (info) {
@@ -18,6 +16,9 @@ var Newsletter = function () {
 
 	this.getStoryHighlights = function () {
 		return this.data;
+	};
+	this.getStoryDetails = function () {
+		return this.fullData;
 	};
 };
 
