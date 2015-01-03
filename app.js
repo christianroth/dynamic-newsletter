@@ -30,7 +30,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+// Routing 
+// JSON dump of data for particular time period
 app.get('/newsletter/:number', routes.newsletter);
+// Default and "current" routes to current newsletter edition 
 app.get('/', routes.current);
 app.get('/current', routes.current);
 
