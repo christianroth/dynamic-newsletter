@@ -1,7 +1,0 @@
-block content
-  h1= title
-  p here is a list of stories that we like:
-  ul
-    each newsletter, index in newsletterContent
-      - newsletter = newsletter.getStoryHighlights()
-      li= newsletter.news_snapshot_title1 + ':' + newsletter.news_snapshot_summary1

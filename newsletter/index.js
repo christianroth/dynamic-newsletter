@@ -1,9 +1,12 @@
 var Newsletter = function () {
 	this.data = {
 		title: null,
+		subtitle: null,
+		summary: null,
 		description: null,
 		link: null,
-		sidebar: null
+		sidebartitle: null,
+		sidebardescription: null
 	};
 
 	this.fill = function (info) {

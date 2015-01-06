@@ -4,7 +4,6 @@
  */
 
 var newsletterContent = require('../data');
-
 var newsletter = require('../newsletter');
 
 for(var number in newsletterContent) {

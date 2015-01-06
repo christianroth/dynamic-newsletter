@@ -12,7 +12,7 @@ head
     |     
     link(rel='icon', href='../../favicon.ico')
     |     
-    title = title
+    title= boilerPlateContent
     // Bootstrap core CSS
     link(href='bootstrap.min.css', rel='stylesheet')
     // Custom styles for this template
@@ -42,9 +42,9 @@ head
             p.newsletter-post-meta Features from this quarter&apos;s issue of the Cloud Services newsletter
             |               
             ul
-              each newsletter, index in newsletterContent
-                - newsletter = newsletter.getStoryHighlights()
-                li= newsletter.title + ': ' + newsletter.description               
+              each item in newsletterContent
+                - item = item.getStoryHighlights()
+                li!= item.title + ': ' + item.summary               
             p.newsletter-post-meta At a glance, how are products delivered by Cloud Services being utilized:
             |               
             ol
@@ -96,96 +96,31 @@ head
         // /.newsletter-sidebar
       // /.row
       // The next story goes here in the following row //
-      .row
-        .col-sm-7.newsletter-main
-          .newsletter-post
-            h2.newsletter-post-title Another newsletter post
-            |             
-            p.newsletter-post-meta
-              | December 23, 2013 by 
-              a(href='#') Jacob
-            |             
-            p
-              | Cum sociis natoque penatibus et magnis 
-              a(href='#') dis parturient montes
-              | , nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-            |             
-            blockquote
-              p
-                | Curabitur blandit tempus porttitor. 
-                strong Nullam quis risus eget urna mollis
-                |  ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            |             
-            p
-              | Etiam porta 
-              em sem malesuada magna
-              |  mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-            |             
-            p
-              | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-          // /.newsletter-post
-        // /.newsletter.main
-        // Some interesting quote, metric, or call-out to put in right column //
-        .col-sm-4.col-sm-offset-1.newsletter-sidebar
-          .sidebar-module.sidebar-module-inset
-            h4 Adoption metrics
-            |             
-            ol.list-unstyled
-              li
-                | Q4 increase in YAMAS 2 metrics: 156%
-                a(href='#')  (more info)
-              |               
-              li
-                | Vip provisioning time in Q4: 5 secs
-                a(href='#')  (more info)
-          // /.sidebar-module
-        // /.row
-      // /.container
-      // The next story goes here in the following row //
-      .row
-        .col-sm-7.newsletter-main
-          .newsletter-post
-            h2.newsletter-post-title Screwdriver (Hosted CI)
-            |               
-            p.newsletter-post-meta
-              | Screwdriver enables CI/CD as a central hosted solution 
-              a(href='#') Jive site
-            |               
-            p
-              | We are analyzing opted-in builds for failure reasons using Cinch and forwarding this data into Splunk for a broader analysis of the health of the company&rsquo;s builds. This data and analysis are critical to our ability to identify areas to address in order to provide a performant and reliable CD service for Yahoo.
-            |               
-            hr
-            |               
-            p
-              | Screwdriver is Yahoo&rsquo;s centralized Continuous Delivery service, enabling developers to deliver their software in a fast and automated way.
-            |               
-            blockquote
-              p
-                | &quot;We were stuck in no man&apos;s land until we offloaded support to the 
-                strong Screwdriver service
-                | . Thank you DPS team&quot; -- Joe Somebody, Media Dev
-            |              
-            h4
-              | More about 
-              a(href='#') Screwdriver news
-          // /.newsletter-post
-        // /.newsletter.main
-        // Some interesting quote, metric, or call-out to put in right column //
-        .col-sm-4.col-sm-offset-1.newsletter-sidebar
-          .sidebar-module.sidebar-module-inset
-            h4 Adoption metrics
-            |             
-            ol.list-unstyled
-              li
-                | Q4 increase in YAMAS 2 metrics: 156%
-                a(href='#')  (more info)
-              |               
-              li
-                | Vip provisioning time in Q4: 5 secs
-                a(href='#')  (more info)
-          // /.sidebar-module
-        // /.row
-      // /.container
+      each item in newsletterContent
+        .row
+          .col-sm-7.newsletter-main
+            .newsletter-post
+              - item = item.getStoryHighlights()
+              h2.newsletter-post-title!= item.title
+              |             
+              p.newsletter-post-meta!= item.subtitle 
+              |             
+              p!= item.description
+              | 
+              a(href=item.link) (More details)
+            // /.newsletter-post
+          // /.newsletter.main
+          // Some interesting quote, metric, or call-out to put in right column //
+          .col-sm-4.col-sm-offset-1.newsletter-sidebar
+            .sidebar-module.sidebar-module-inset
+              h4!= item.sidebartitle
+              |             
+              ol.list-unstyled
+                li!= item.sidebardescription
+            // /.sidebar-module
+          // /.row
+        // /.container
+      
       footer.newsletter-footer
         p
           | The Cloud Services newsletter is published monthly. See archive for older editions of the 
