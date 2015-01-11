@@ -1,5 +1,5 @@
 {
-  "name": "newsletter",
+  "name": "Dynamic Newsletter App",
   "version": "0.0.1",
   "description": "A module for pulling dynamic newsletter content",
   "main": "index.js",
