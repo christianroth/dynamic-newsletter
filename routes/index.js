@@ -22,7 +22,7 @@ exports.newsletter = function(req, res){
 
 exports.current = function (req, res) {
 	res.render('newsletter', {
-		title: 'All Newsletter Content', 
+		title: 'Sample Newsletter', 
 		newsletterContent: newsletterContent
 	});
 };

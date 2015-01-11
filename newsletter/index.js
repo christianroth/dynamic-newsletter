@@ -6,7 +6,8 @@ var Newsletter = function () {
 		description: null,
 		link: null,
 		sidebartitle: null,
-		sidebardescription: null
+		sidebardescription: null,
+		announcement: null
 	};
 
 	this.fill = function (info) {
